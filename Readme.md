@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Ihor Spyrydonov](https://up.htmlacademy.ru/htmlcss/20/user/671597).
-* Наставник: `Неизвестно`.
+* Наставник: [Денис Выхрыстюк](https://htmlacademy.ru/profile/id568747).
 
 ---
 
