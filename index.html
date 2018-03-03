@@ -5,10 +5,18 @@
     	<title>Девайс</title>
   	</head>
   	<body>
+
   		<header class="main-header">
+  			<a class="main-logo">Device</a> <!-- Пока оставлю в <a>, чтобы не забыть, что в каталоге это ссылка на главную -->
+  			<div class="minor-navigation">
+  				<!-- Здесь будет Форма поиска -->
+  				<ul class="user-navigation">
+    				<li class="login-link"><a href="#">Войти</a></li>
+    			</ul>
+    			<a class="compare" href="#">Сравнить</a>
+    			<a class="cart" href="#">Корзина</a>
+  			</div>
   			<nav class="main-navigation">
-  				<!-- Похоже, что логотип выполнен в виде обычного текста? -->
-  				<a class="main-logo">Device</a>
   				<ul class="site-navigation">
   					<li>
   						<!-- Пока не понятно, реальная ли это ссылка? -->
@@ -26,12 +34,6 @@
   					<li><a href="#">Гарантия</a></li>
   					<li><a href="#">Контакты</a></li>
   				</ul>
-  				<!-- Здесь будет Форма поиска -->
-  				<ul class="user-navigation">
-    				<li class="login-link"><a href="#">Войти</a></li>
-    			</ul>
-    			<a class="compare" href="#">Сравнить</a>
-    			<a class="cart" href="#">Корзина</a>
   			</nav>
   		</header>
 
@@ -117,36 +119,71 @@
   			<section class="categories">
   				<h2 class="visual-hidden">Категории товаров</h2>
   				<ul class="categories-list">
+  					<!-- Все картинки разного размера. (Узнать, как их всех правильно отцентровать) -->
   					<li class="category-item">
-  						<a href="#">Виртуальная реальность</a>
+  						<a href="#">
+  							<h3>Виртуальная реальность</h3>
+  							<!-- Может после <h3> лучше не в <div>, а в <p>? -->
+  							<div class="category-item-image">
+  								<img src="http://placehold.it/97x55" width="97" height="55" alt="Виртуальная реальность">
+  							</div>
+  						</a>
   					</li>
   					<li class="category-item">
-  						<a href="catalog.html">Моноподы для селфи</a>
+  						<a href="catalog.html">
+  							<h3>Моноподы для селфи</h3>
+  							<!-- Может после <h3> лучше не в <div>, а в <p>? -->
+  							<div class="category-item-image">
+  								<img src="http://placehold.it/86x117" width="86" height="117" alt="Моноподы для селфи">
+  							</div>
+  						</a>
   					</li>
   					<li class="category-item">
-  						<a href="#">Экшн-камеры</a>
+  						<a href="#">
+  							<h3>Экшн-камеры</h3>
+  							<!-- Может после <h3> лучше не в <div>, а в <p>? -->
+  							<div class="category-item-image">
+  								<img src="http://placehold.it/71x87" width="71" height="87" alt="Экшн-камеры">
+  							</div>
+  						</a>
   					</li>
   					<li class="category-item">
-  						<a href="#">Фитнес-браслеты</a>
+  						<a href="#">
+  							<h3>Фитнес-браслеты</h3>
+  							<!-- Может после <h3> лучше не в <div>, а в <p>? -->
+  							<div class="category-item-image">
+  								<img src="http://placehold.it/107x65" width="107" height="65" alt="Фитнес-браслеты">
+  							</div>
+  						</a>
   					</li>
   					<li class="category-item">
-  						<a href="#">Умные часы</a>
+  						<a href="#">
+  							<h3>Умные часы</h3>
+  							<div class="category-item-image">
+  								<img src="http://placehold.it/56x98" width="56" height="98" alt="Умные часы">
+  							</div>
+  						</a>
   					</li>
   					<li class="category-item">
-  						<a href="#">Квадрокоптеры</a>
+  						<a href="#">
+  							<h3>Квадрокоптеры</h3>
+  							<div class="category-item-image">
+  								<img src="http://placehold.it/132x69" width="132" height="69" alt="Квадрокоптеры">
+  							</div>
+  						</a>
   					</li>
   				</ul>
   			</section>
-  			<!-- Сомневаюсь в правильности разметки слайдера .features-slider -->
+  	<!-- Второй слайдер -->
   			<section class="features-slider">
   				<h2 class="visual-hidden">Преимущества</h2>
-  				<nav class="features-navigation">
+  				<div class="features-navigation">
   					<ul>
   						<li>Доставка</li>
   						<li>Гарантия</li>
   						<li>Кредит</li>
   					</ul>
-  				</nav>
+  				</div>
   				<ul class="features-list">
   					<li class="feature-item">
   						<h3 class="feature-item-title">Доставка</h3>
@@ -171,53 +208,56 @@
   					<li class="partner-item">Vive</li>
   				</ul>
   			</section>
-  			<section class="about-us">
-  				<h2>О нас</h2>
-  				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-  				<p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="upper">Device</span> работает со многими транспортными компаниями:</p>
-  				<ul class="shipping-partners-list">
-  					<li class="shipping-partner-item">Деловые линии</li>
-  					<li class="shipping-partner-item">Автотрейдинг</li>
-  					<li class="shipping-partner-item">ЖелДорЭкспедиция</li>
-  				</ul>
-  				<a class="btn" href="#">Подробнее о нас</a>
-  			</section>
-  			<section class="contacts">
-  				<h2>Контакты</h2>
-  				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-  				<p class="contacts-map">
-  					<img src="http://placehold.it/560x222" width="560" height="222" alt="Как к нам проехать">
-  				</p>
-  				<a class="btn" href="#">Напишите нам</a>
+  			<section class="about-us-and-contacts">
+  				<div class="about-us">
+  					<h2>О нас</h2>
+  					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+  					<p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="upper">Device</span> работает со многими транспортными компаниями:</p>
+  					<ul class="shipping-partners-list">
+  						<li class="shipping-partner-item">Деловые линии</li>
+  						<li class="shipping-partner-item">Автотрейдинг</li>
+  						<li class="shipping-partner-item">ЖелДорЭкспедиция</li>
+  					</ul>
+  					<a class="btn" href="#">Подробнее о нас</a>
+  				</div>
+  				<div class="contacts">
+  					<h2>Контакты</h2>
+  					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+  					<p class="contacts-map">
+  						<img src="http://placehold.it/560x222" width="560" height="222" alt="Как к нам проехать">
+  					</p>
+  					<a class="btn" href="#">Напишите нам</a>
+  				</div>
   			</section>
   		</main>
 
     	<footer class="main-footer">
     		<!-- Похоже, что логотип выполнен в виде обычного текста? -->
-  			<a class="footer-logo">Device</a>
-  			<p class="footer-contacts">г. Москва, ул. Строителей, 15</p>
-  			<p class="footer-contacts-phone">Тел: +7 (495) 495-95-95</p>
-  			<!-- Можно ли использовать здесь тэг <nav>? -->
-  			<nav class="footer-navigation">
-  				<ul class="site-navigation-footer">
-  					<li><a href="#">Доставка</a></li>
-  					<li><a href="#">Гарантия</a></li>
-  					<li><a href="#">Контакты</a></li>
-  				</ul>
+    		<div class="footer-top">
+    			<a class="footer-logo">Device</a>
   				<ul class="user-navigation-footer">
     				<li class="login-link"><a href="#">Войти</a></li>
     			</ul>
     			<a class="compare" href="#">Сравнить</a>
     			<a class="cart" href="#">Корзина</a>
-  			</nav>
-  			<div class="footer-social">
-        		<ul>
+    		</div>
+  			<div class="footer-middle">
+  				<p class="footer-contacts">г. Москва, ул. Строителей, 15</p>
+  				<ul class="site-navigation-footer">
+  					<li><a href="#">Доставка</a></li>
+  					<li><a href="#">Гарантия</a></li>
+  					<li><a href="#">Контакты</a></li>
+  				</ul>
+  				<p class="footer-contacts-phone">Тел: +7 (495) 495-95-95</p>
+  			</div>
+  			<div class="footer-bottom">
+        		<ul class="footer-social">
         			<li><a class="social-btn" href="#">Фейсбук</a></li>
         			<li><a class="social-btn" href="#">Инстаграм</a></li>
         			<li><a class="social-btn" href="#">Твиттер</a></li>
         		</ul>
+        		<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">Логотип Академии</a>
       		</div>
-      		<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">Логотип Академии</a>
     	</footer>
 
     	<!-- Всплывающие окна -->
@@ -228,6 +268,7 @@
     	</section>
 
     	<section class="modal modal-map">
+    		<h2 class="visual-hidden">Как до нас добраться</h2>
     		<!-- Здесь будет карта -->
     		<span class="modal-close">x</span>
     	</section>
