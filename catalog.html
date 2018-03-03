@@ -6,16 +6,24 @@
   	</head>
   	<body>
   		<header class="main-header">
+  			<a class="main-logo" href="index.html">Device</a> <!-- Пока оставлю в <a>, чтобы не забыть, что в каталоге это ссылка на главную -->
+  			<div class="minor-navigation">
+  				<!-- Здесь будет Форма поиска -->
+  				<ul class="user-navigation">
+    				<li class="user-name"><a>Валентин Петухов</a></li>
+    				<li class="login-link"><a href="#">Выйти</a></li>
+    			</ul>
+    			<a class="compare" href="#">Сравнить</a>
+    			<a class="cart" href="#">Корзина</a>
+  			</div>
   			<nav class="main-navigation">
-  				<!-- Похоже, что логотип выполнен в виде обычного текста? -->
-  				<a class="main-logo" href="index.html">Device</a>
   				<ul class="site-navigation">
   					<li>
   						<!-- Пока не понятно, реальная ли это ссылка? -->
   						<a class="site-navigation-menu">Каталог товаров</a>
   						<ul class="site-navigation-sub-menu">
   							<li><a href="#">Виртуальная реальность</a></li>
-  							<li><a href="catalog.html">Моноподы для селфи</a></li>
+  							<li><a>Моноподы для селфи</a></li>
   							<li><a href="#">Экшн-камеры</a></li>
   							<li><a href="#">Фитнес-браслеты</a></li>
   							<li><a href="#">Умные часы</a></li>
@@ -26,13 +34,6 @@
   					<li><a href="#">Гарантия</a></li>
   					<li><a href="#">Контакты</a></li>
   				</ul>
-  				<!-- Здесь будет Форма поиска -->
-  				<ul class="user-navigation">
-  					<li class="user-name">Валентин Петухов</li>
-    				<li class="logout-link"><a href="#">Выйти</a></li>
-    			</ul>
-    			<a class="compare" href="#">Сравнить</a>
-    			<a class="cart" href="#">Корзина</a>
   			</nav>
   		</header>
 
@@ -99,32 +100,35 @@
   		</main>
 
   		<footer class="main-footer">
-    		<!-- Похоже, что логотип выполнен в виде обычного текста? -->
-  			<a class="footer-logo">Device</a>
-  			<p class="footer-contacts">г. Москва, ул. Строителей, 15</p>
-  			<p class="footer-contacts-phone">Тел: +7 (495) 495-95-95</p>
-  			<!-- Можно ли использовать здесь тэг <nav>? -->
-  			<nav class="footer-navigation">
+    		<!-- Первая строчка -->
+    		<div class="footer-top">
+    			<a class="footer-logo">Device</a>
+  				<ul class="user-navigation-footer">
+  					<li class="user-name"><a>Валентин Петухов</a></li>
+    				<li class="login-link"><a href="#">Выйти</a></li>
+    			</ul>
+    			<a class="compare" href="#">Сравнить</a>
+    			<a class="cart" href="#">Корзина</a>
+    		</div>
+    		<!-- Вторая строчка -->
+  			<div class="footer-middle">
+  				<p class="footer-contacts">г. Москва, ул. Строителей, 15</p>
   				<ul class="site-navigation-footer">
   					<li><a href="#">Доставка</a></li>
   					<li><a href="#">Гарантия</a></li>
   					<li><a href="#">Контакты</a></li>
   				</ul>
-  				<ul class="user-navigation-footer">
-    				<li class="user-name">Валентин Петухов</li>
-    				<li class="logout-link"><a href="#">Выйти</a></li>
-    			</ul>
-    			<a class="compare" href="#">Сравнить</a>
-    			<a class="cart" href="#">Корзина</a>
-  			</nav>
-  			<div class="footer-social">
-        		<ul>
+  				<p class="footer-contacts-phone">Тел: +7 (495) 495-95-95</p>
+  			</div>
+  			<!-- Третья строчка -->
+  			<div class="footer-bottom">
+        		<ul class="footer-social">
         			<li><a class="social-btn" href="#">Фейсбук</a></li>
         			<li><a class="social-btn" href="#">Инстаграм</a></li>
         			<li><a class="social-btn" href="#">Твиттер</a></li>
         		</ul>
+        		<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">Логотип Академии</a>
       		</div>
-      		<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">Логотип Академии</a>
     	</footer>
 
   	</body>
