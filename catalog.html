@@ -2,13 +2,16 @@
 <html lang="ru">
  	<head>
     	<meta charset="utf-8">
-    	<title>Девайс</title>
+    	<title>Каталог товаров | Девайс</title>
   	</head>
   	<body>
   		<header class="main-header">
-  			<a class="main-logo" href="index.html">Device</a> <!-- Пока оставлю в <a>, чтобы не забыть, что в каталоге это ссылка на главную -->
+  			<a class="main-logo" href="index.html" lang="en">Device</a>
   			<div class="minor-navigation">
-  				<!-- Здесь будет Форма поиска -->
+  				<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+  					<input class="search-form-input"  type="search" name="search">
+  					<button class="search-button" type="submit">Найти</button>
+  				</form>
   				<ul class="user-navigation">
     				<li class="user-name"><a>Валентин Петухов</a></li>
     				<li class="login-link"><a href="#">Выйти</a></li>
@@ -19,7 +22,6 @@
   			<nav class="main-navigation">
   				<ul class="site-navigation">
   					<li>
-  						<!-- Пока не понятно, реальная ли это ссылка? -->
   						<a class="site-navigation-menu">Каталог товаров</a>
   						<ul class="site-navigation-sub-menu">
   							<li><a href="#">Виртуальная реальность</a></li>
@@ -44,10 +46,78 @@
     			<li><a href="#">Каталог товаров</a></li>
     			<li class="breadcrumbs-current">Моноподы для селфи</li>
     		</ul>
+    		<!-- Форма фильтров товаров -->
+    		<section class="filters">
+    			<h2>Фильтр:</h2>
+    			<form class="filter" method="get" action="https://echo.htmlacademy.ru" oninput="fromoutput.value=countfrom.value;tooutput.value=countto.value">
+    				<fieldset>
+    					<legend>Стоимость</legend>
+    					<label class="visual-hidden" for="filter-count-from">Минимальная стоимость</label>
+    					<input class="visual-hidden filter-input-range" type="range" name="countfrom" min="0" max="9000" id="filter-count-from" value="0">
+    					<label class="visual-hidden" for="filter-count-to">Максимальная стоимость</label>
+    					<input class="visual-hidden filter-input-range" type="range" name="countto" min="0" max="9000" id="filter-count-to" value="5000">
+    					<div class="output-area">
+    						от <output name="fromoutput" value="0">0</output>
+    						до <output name="tooutput" value="0">5000</output>
+    					</div>
+    				</fieldset>
+    				<fieldset>
+    					<legend>Цвет</legend>
+    					<ul>
+    						<li class="filter-option">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
+                                <label for="filter-black">Черный</label>
+                            </li>
+    						<li class="filter-option">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="white" id="filter-white">
+                                <label for="filter-white">Белый</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="blue" id="filter-blue" checked>
+                                <label for="filter-blue">Синий</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="red" id="filter-red" checked>
+                                <label for="filter-red">Красный</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pink" id="filter-pink">
+                                <label for="filter-pink">Розовый</label>
+                            </li>
+    					</ul>
+    				</fieldset>
+    				<fieldset>
+    					<legend lang="en">Bluetooth</legend>
+    					<ul>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input-radio" type="radio" name="bluetooth" value="yes" id="filter-yes" checked>
+                                <label for="filter-yes">Есть</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="not" id="filter-not">
+                                <label for="filter-not">Нет</label>
+                            </li>
+                        </ul>
+    				</fieldset>
+    				<button class="btn" type="submit">Показать</button>
+    			</form>
+    		</section>
+    		<!-- Сортировка товаров -->
+    		<section>
+    			<h2>Сортировка</h2>
+    			<ul>
+    				<li><a class="order-by-price order-active">По цене</a></li>
+    				<li><a class="order-by-type" href="#">По типу</a></li>
+    				<li><a class="order-by-popular" href="#">По популярности</a></li>
+    			</ul>
+    			<ul>
+    				<li><a class="order-by-up" href="#">По убыванию</a></li>
+   					<li><a class="order-by-down order-active">По возрастанию</a></li>
+   				</ul>
+    		</section>
+    		<!-- Каталог товаров -->
     		<section class="catalog">
     			<h2 class="visual-hidden">Список моноподов для селфи</h2>
-    			<!-- Здесь будет форма (фильтр) -->
-    			<!-- Здесь будет сортировка товаров -->
     			<ul class="catalog-list">
     				<li class="catalog-item">
     					<h3>Любительская селфи-палка</h3>
