@@ -11,7 +11,10 @@
   			<a class="main-logo">Device</a>
   			<!-- Вторая строчка -->
   			<div class="minor-navigation">
-  				<!-- Здесь будет Форма поиска -->
+  				<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+  					<input class="search-form-input"  type="search" name="search">
+  					<button class="search-button" type="submit">Найти</button>
+  				</form>
   				<ul class="user-navigation">
     				<li class="login-link"><a href="#">Войти</a></li>
     			</ul>
@@ -40,7 +43,7 @@
   		</header>
 
   		<main class="container">
-  			<h1 class="visual-hidden">Магазин современных гаджетов «Device»</h1>
+  			<h1 class="visual-hidden">Магазин современных гаджетов «<i class="device-name" lang="en">Device</i>»</h1>
   			<!-- Слайдер -->
   			<section class="slider">
   				<h2 class="visual-hidden">Популярные товары</h2>
@@ -180,26 +183,26 @@
   			</section>
   			<!-- Второй слайдер -->
   			<section class="features-slider">
-  				<h2 class="visual-hidden">Преимущества</h2>
+  				<h2 class="visual-hidden">Преимущества магазина «<i class="device-name" lang="en">Device</i>»</h2>
   				<!-- Навигация второго слайдера -->
   				<div class="features-navigation">
   					<ul>
-  						<li>Доставка</li>
-  						<li>Гарантия</li>
-  						<li>Кредит</li>
+  						<li><a class="features-navigation-button" href="#feature-item-delivery">Доставка</a></li>
+  						<li><a class="features-navigation-button" href="#feature-item-warranty">Гарантия</a></li>
+  						<li><a class="features-navigation-button" href="#feature-item-credit">Кредит</a></li>
   					</ul>
   				</div>
   				<!-- Слайды -->
   				<ul class="features-list">
-  					<li class="feature-item">
+  					<li class="feature-item" id="feature-item-delivery">
   						<h3 class="feature-item-title">Доставка</h3>
   						<p class="feature-item-desc">Мы с удовольствием доставим ваш товар пярмо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
   					</li>
-  					<li class="feature-item">
+  					<li class="feature-item" id="feature-item-warranty">
   						<h3 class="feature-item-title">Гарантия</h3>
   						<p class="feature-item-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
   					</li>
-  					<li class="feature-item">
+  					<li class="feature-item" id="feature-item-credit">
   						<h3 class="feature-item-title">Кредит</h3>
   						<p class="feature-item-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
   					</li>
@@ -207,7 +210,7 @@
   			</section>
   			<!-- Партнеры -->
   			<section class="partners">
-  				<h2 class="visual-hidden">Наши партнеры</h2>
+  				<h2 class="visual-hidden">Партнеры магазина «<i class="device-name" lang="en">Device</i>»</h2>
   				<ul class="partners-list">
   					<li class="partner-item">DJI</li>
   					<li class="partner-item">SP Gadgets</li>
@@ -222,7 +225,7 @@
   				<div class="about-us">
   					<h3>О нас</h3>
   					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-  					<p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="upper">Device</span> работает со многими транспортными компаниями:</p>
+  					<p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="upper" lang="en">Device</span> работает со многими транспортными компаниями:</p>
   					<ul class="shipping-partners-list">
   						<li class="shipping-partner-item">Деловые линии</li>
   						<li class="shipping-partner-item">Автотрейдинг</li>
@@ -276,14 +279,24 @@
     	<!-- Всплывающие окна -->
     	<section class="modal modal-write-us">
     		<h2 class="visual-hidden">Форма обратной связи</h2>
-      		<!-- Здесь будет форма -->
-      		<span class="modal-close">x</span>
+      		<form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+      			<label for="name">Ваше имя:</label>
+      			<input type="text" name="name" id="name" placeholder="Имя Фамилия">
+      			<label for="e-mail">Ваш e-mail:</label>
+      			<input type="email" name="e-mail" id="e-mail" placeholder="email@example.com">
+      			<label for="text">Текст письма:</label>
+      			<textarea name="text" id="text" placeholder="В свободной форме"></textarea>
+      			<button class="btn" type="submit">Отправить</button>
+      		</form>
+      		<button class="modal-close" type="button">Закрыть</button>
     	</section>
 
     	<section class="modal modal-map">
     		<h2 class="visual-hidden">Как до нас добраться</h2>
-    		<!-- Здесь будет карта -->
-    		<span class="modal-close">x</span>
+    		<p>
+        		<img src="img/map-big.jpg" width="960" height="559" alt="Адрес магазина: Москва, ул. Строителей, 15">
+      		</p>
+      		<button class="modal-close" type="button">Закрыть</button>
     	</section>
 
   	</body>
