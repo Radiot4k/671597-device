@@ -18,7 +18,7 @@
   			<div class="header-middle">
   				<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
   					<label class="visually-hidden" for="search">Поиск по сайту</label>
-  					<input class="search-form-input"  type="search" name="search" id="search" value="Поиск по сайту"" placeholder="">
+  					<input class="search-form-input"  type="search" name="search" id="search" value="Поиск по сайту" placeholder="Поиск по сайту">
   					<button class="search-button" type="submit">Найти</button>
   				</form>
   				<ul class="user-navigation">
@@ -121,6 +121,17 @@
   						<a class="btn" href="#">Подробнее</a>
   					</li>
   				</ol>
+  				<ul class="slides-switches">
+  					<li class="slide-radio">
+  						<button class="slide-btn" type="button">Первый слайд</button>
+  					</li>
+  					<li class="slide-radio">
+  						<button class="slide-btn" type="button">Второй слайд</button>
+  					</li>
+  					<li class="slide-radio">
+  						<button class="slide-btn" type="button">Третий слайд</button>
+  					</li>
+  				</ul>
   			</section>
   			<!-- Категории товаров -->
   			<section class="categories">
@@ -182,29 +193,45 @@
   				</ul>
   			</section>
   			<!-- Второй слайдер -->
-  			<section class="features-slider">
+  			<section class="servises-slider">
   				<h2 class="visually-hidden">Преимущества магазина «<i class="device-name" lang="en">Device</i>»</h2>
   				<!-- Навигация второго слайдера -->
-  				<div class="features-navigation">
-  					<ul>
-  						<li><a class="features-navigation-button" href="#feature-item-delivery">Доставка</a></li>
-  						<li><a class="features-navigation-button" href="#feature-item-warranty">Гарантия</a></li>
-  						<li><a class="features-navigation-button" href="#feature-item-credit">Кредит</a></li>
-  					</ul>
-  				</div>
+  				<!--<div class="servises-navigation">
+  					<input class="visually-hidden" type="radio" name="servises" id="delivery" value="delivery" checked>
+  					<label class="btn servise-btn" for="delivery">Доставка</label>
+  					<input class="visually-hidden" type="radio" name="servises" id="warranty" value="warranty">
+  					<label class="btn servise-btn" for="warranty">Гарантия</label>
+  					<input class="visually-hidden" type="radio" name="servises" id="credit" value="credit">
+  					<label class="btn servise-btn" for="credit">Кредит</label>
+  				</div>-->
   				<!-- Слайды -->
-  				<ul class="features-list">
-  					<li class="feature-item" id="feature-item-delivery">
-  						<h3 class="feature-item-title">Доставка</h3>
-  						<p class="feature-item-desc">Мы с удовольствием доставим ваш товар пярмо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+  				<ul class="servises-list">
+  					<li class="servise-item">
+  						<input class="visually-hidden" type="radio" name="servises" id="delivery" value="delivery" checked>
+  						<label class="btn servise-btn" for="delivery">Доставка</label>
+  						<article class="servise-item-content servise-item-delivery">
+  							<h3 class="servise-item-title">Доставка</h3>
+  							<p class="servise-item-desc">Мы с удовольствием доставим ваш товар пярмо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+  						</article>
+  						
   					</li>
-  					<li class="feature-item" id="feature-item-warranty">
-  						<h3 class="feature-item-title">Гарантия</h3>
-  						<p class="feature-item-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+  					<li class="servise-item">
+  						<input class="visually-hidden" type="radio" name="servises" id="warranty" value="warranty">
+  						<label class="btn servise-btn" for="warranty">Гарантия</label>
+  						<article class="servise-item-content servise-item-warranty">
+  							<h3 class="servise-item-title">Гарантия</h3>
+  							<p class="servise-item-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+  						</article>
+  						
   					</li>
-  					<li class="feature-item" id="feature-item-credit">
-  						<h3 class="feature-item-title">Кредит</h3>
-  						<p class="feature-item-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+  					<li class="servise-item">
+  						<input class="visually-hidden" type="radio" name="servises" id="credit" value="credit">
+  						<label class="btn servise-btn" for="credit">Кредит</label>
+  						<article class="servise-item-content servise-item-credit">
+  							<h3 class="servise-item-title">Кредит</h3>
+  							<p class="servise-item-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+  						</article>
+  						
   					</li>
   				</ul>
   			</section>
@@ -212,10 +239,18 @@
   			<section class="brands">
   				<h2 class="visually-hidden">Бренды магазина «<span class="device-name" lang="en">Device</span>»</h2>
   				<ul class="brands-list">
-  					<li class="brands-item">DJI</li>
-  					<li class="brands-item">SP Gadgets</li>
-  					<li class="brands-item">GoPro</li>
-  					<li class="brands-item">Vive</li>
+  					<li class="brands-item">
+  						<img src="img/dji.jpg" width="260" height="100" alt="DJI">
+  					</li>
+  					<li class="brands-item">
+  						<img src="img/sp-gadgets.jpg" width="260" height="100" alt="SP Gadgets">
+  					</li>
+  					<li class="brands-item">
+  						<img src="img/gopro.jpg" width="260" height="100" alt="GoPro">
+  					</li>
+  					<li class="brands-item">
+  						<img src="img/vive.jpg" width="260" height="100" alt="VIVE">
+  					</li>
   				</ul>
   			</section>
   			<!-- О НАС -->

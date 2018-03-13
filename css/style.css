@@ -144,10 +144,11 @@ a {
 
 	background-color: #ffffff;
 }
-
+/*
 .popular-item {
 	color: #464646;
 }
+*/
 
 .popular-item-slogan {
 	font-size: 47px;
@@ -161,6 +162,7 @@ a {
 	font-size: 15px;
 	font-weight: 300;
 	line-height: 30px;
+	color: #464646;
 }
 
 .popular-item-spec th {
@@ -168,6 +170,7 @@ a {
 	font-size: 13px;
 	font-weight: 300;
 	line-height: 20px;
+	color: #464646;
 }
 
 .popular-item-spec tr {
@@ -188,6 +191,7 @@ a {
 	letter-spacing: 2px;
 
 	background-color: #f0c52e;
+	border: none;
 }
 
 .btn:hover.
@@ -197,4 +201,51 @@ a {
 
 .btn:active {
 	color: rgba(0, 0, 0, 0.3);
+}
+
+.categories-list {
+	list-style: none;
+}
+
+.category-item h3 {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #000000;
+
+	background-color: #ffffff;
+}
+
+.category-item-image {
+	background-color: #f7e296;
+}
+
+.category-item-image:hover,
+.category-item-image:active {
+	background-color: #f0c52e;
+}
+
+.servises-slider {
+	background-color: #ffffff;
+}
+
+.servises-list {
+	list-style: none;
+
+	background-color: #e5e5e5;
+}
+
+.servise-item input:checked + .servise-btn {
+	color: #f7e184;
+
+	background-color: #000000;
+}
+
+.servise-item-content h3 {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 47px;
+	line-height: 48px;
+	font-weight: 700;
+	color: #000000;
 }
