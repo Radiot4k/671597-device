@@ -25,7 +25,7 @@ body {
 	background-color: #ffffff;
 }
 
-/*.visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -34,7 +34,7 @@ body {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}*/
+}
 
 a {
 	text-decoration: none;
@@ -135,6 +135,66 @@ a {
 	letter-spacing: 2px;
 }
 
-.site-navigation-submenu {
-	background-color: #f7e296;
+.popular-list{
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 179.2px;
+	font-weight: 700;
+	list-style-type: decimal-leading-zero;
+	color: #ffffff;
+
+	background-color: #ffffff;
+}
+
+.popular-item {
+	color: #464646;
+}
+
+.popular-item-slogan {
+	font-size: 47px;
+	font-weight: 700;
+	line-height: 56px;
+	color: #000000;
+}
+
+.popular-item-desc {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 30px;
+}
+
+.popular-item-spec th {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 20px;
+}
+
+.popular-item-spec tr {
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 48px;
+	color: #000000;
+}
+
+.btn {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	color: #000000;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+	background-color: #f0c52e;
+}
+
+.btn:hover.
+.btn:focus {
+	background-color: #f0c52e;
+}
+
+.btn:active {
+	color: rgba(0, 0, 0, 0.3);
 }
