@@ -1,0 +1,140 @@
+@font-face {
+	font-family: 'Gilroy';
+	font-style: bold;
+	font-weight: 700;
+	src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url(fonts/gilroyextrabold.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Gilroy Light'), local('Gilroy-Light'), url(fonts/gilroylight.woff2) format('woff2');
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 30px;
+	color: #464646;
+
+	background-color: #ffffff;
+}
+
+/*.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}*/
+
+a {
+	text-decoration: none;
+}
+
+.header-middle,
+.main-navigation {
+	background-color: #f7e296;
+}
+
+.main-logo {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 48px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.logo-link:hover,
+.logo-link:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.logo-link:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.search-button {
+	font: inherit;
+	text-align: center;
+	vertical-align: middle;
+
+	background-color: transparent;
+	border: 2px solid #000000;
+}
+
+.search-button:hover,
+.search-button:focus {
+	color: #ffffff;
+
+	background-color: #000000;
+}
+
+.search-button:active{
+	color: rgba(255, 255, 255, 0.3);;
+}
+
+.search-form input {
+	font: inherit;
+	vertical-align: middle;
+	color: rgba(0, 0, 0, 0.3);
+
+	background-color: transparent;
+	border: none;
+}
+
+.search-form input:hover {
+	color: rgba(0, 0, 0, 0.6);
+
+}
+/* Непонятно, как менять цвет при наведении у placeholder в input. Поэтому вместо placeholder="Поиск по сайту" поставил value="Поиск по сайту" */
+.search-form input:focus {
+	color: #000000;
+
+	border-bottom: 2px solid #000000;
+}
+
+.user-navigation,
+.site-navigation,
+.site-navigation-submenu {
+	list-style: none;
+}
+
+.user-navigation a,
+.site-navigation a {
+	color: #000000;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus,
+.site-navigation a:hover,
+.site-navigation a:focus  {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.user-navigation a:active,
+.site-navigation a:active  {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation-menu {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.site-navigation-submenu {
+	background-color: #f7e296;
+}

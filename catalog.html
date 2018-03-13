@@ -3,27 +3,33 @@
  	<head>
     	<meta charset="utf-8">
     	<title>Каталог товаров | Девайс</title>
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    	<link rel="stylesheet" href="css/normalize.css">
+    	<link rel="stylesheet" href="css/style.css">
   	</head>
   	<body>
   		<header class="main-header">
-  			<a class="main-logo" href="index.html" lang="en">Device</a>
-  			<div class="minor-navigation">
+  			<div class="header-top">
+  				<a class="main-logo logo-link" href="index.html" lang="en">Device</a>
+  			</div>
+  			<div class="header-middle">
   				<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-  					<input class="search-form-input"  type="search" name="search">
+  					<label class="visually-hidden" for="search">Поиск по сайту</label>
+  					<input class="search-form-input"  type="search" name="search" id="search" placeholder="Поиск по сайту">
   					<button class="search-button" type="submit">Найти</button>
   				</form>
   				<ul class="user-navigation">
-    				<li class="user-name"><a>Валентин Петухов</a></li>
-    				<li class="login-link"><a href="#">Выйти</a></li>
+    				<li><a class="user-name">Валентин Петухов</a></li>
+    				<li><a class="login-link" href="#">Выйти</a></li>
+    				<li><a class="compare" href="#">Сравнить</a></li>
+    				<li><a class="cart" href="#">Корзина</a></li>
     			</ul>
-    			<a class="compare" href="#">Сравнить</a>
-    			<a class="cart" href="#">Корзина</a>
   			</div>
   			<nav class="main-navigation">
   				<ul class="site-navigation">
   					<li>
   						<a class="site-navigation-menu">Каталог товаров</a>
-  						<ul class="site-navigation-sub-menu">
+  						<ul class="site-navigation-submenu">
   							<li><a href="#">Виртуальная реальность</a></li>
   							<li><a>Моноподы для селфи</a></li>
   							<li><a href="#">Экшн-камеры</a></li>
@@ -32,9 +38,9 @@
   							<li><a href="#">Квадрокоптеры</a></li>
   						</ul>
   					</li>
-  					<li><a href="#">Доставка</a></li>
-  					<li><a href="#">Гарантия</a></li>
-  					<li><a href="#">Контакты</a></li>
+  					<li><a class="site-navigation-menu" href="#">Доставка</a></li>
+  					<li><a class="site-navigation-menu" href="#">Гарантия</a></li>
+  					<li><a class="site-navigation-menu" href="#">Контакты</a></li>
   				</ul>
   			</nav>
   		</header>
@@ -52,10 +58,10 @@
     			<form class="filter" method="get" action="https://echo.htmlacademy.ru" oninput="fromoutput.value=countfrom.value;tooutput.value=countto.value">
     				<fieldset>
     					<legend>Стоимость</legend>
-    					<label class="visual-hidden" for="filter-count-from">Минимальная стоимость</label>
-    					<input class="visual-hidden filter-input-range" type="range" name="countfrom" min="0" max="9000" id="filter-count-from" value="0">
-    					<label class="visual-hidden" for="filter-count-to">Максимальная стоимость</label>
-    					<input class="visual-hidden filter-input-range" type="range" name="countto" min="0" max="9000" id="filter-count-to" value="5000">
+    					<label class="visually-hidden" for="filter-count-from">Минимальная стоимость</label>
+    					<input class="visually-hidden filter-input-range" type="range" name="countfrom" min="0" max="9000" id="filter-count-from" value="0">
+    					<label class="visually-hidden" for="filter-count-to">Максимальная стоимость</label>
+    					<input class="visually-hidden filter-input-range" type="range" name="countto" min="0" max="9000" id="filter-count-to" value="5000">
     					<div class="output-area">
     						от <output name="fromoutput" value="0">0</output>
     						до <output name="tooutput" value="0">5000</output>
@@ -117,7 +123,7 @@
     		</section>
     		<!-- Каталог товаров -->
     		<section class="catalog">
-    			<h2 class="visual-hidden">Список моноподов для селфи</h2>
+    			<h2 class="visually-hidden">Список моноподов для селфи</h2>
     			<ul class="catalog-list">
     				<li class="catalog-item">
     					<h3>Любительская селфи-палка</h3>

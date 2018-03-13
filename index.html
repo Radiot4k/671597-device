@@ -3,30 +3,36 @@
  	<head>
     	<meta charset="utf-8">
     	<title>Девайс</title>
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    	<link rel="stylesheet" href="css/normalize.css">
+    	<link rel="stylesheet" href="css/style.css">
   	</head>
   	<body>
 
   		<header class="main-header">
   			<!-- первая строчка -->
-  			<a class="main-logo">Device</a>
+  			<div class="header-top">
+  				<a class="main-logo" lang="en">Device</a>
+  			</div>
   			<!-- Вторая строчка -->
-  			<div class="minor-navigation">
+  			<div class="header-middle">
   				<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-  					<input class="search-form-input"  type="search" name="search">
+  					<label class="visually-hidden" for="search">Поиск по сайту</label>
+  					<input class="search-form-input"  type="search" name="search" id="search" value="Поиск по сайту"" placeholder="">
   					<button class="search-button" type="submit">Найти</button>
   				</form>
   				<ul class="user-navigation">
-    				<li class="login-link"><a href="#">Войти</a></li>
+    				<li><a class="login-link" href="#">Войти</a></li>
+    				<li><a class="compare" href="#">Сравнить</a></li>
+    				<li><a class="cart" href="#">Корзина</a></li>
     			</ul>
-    			<a class="compare" href="#">Сравнить</a>
-    			<a class="cart" href="#">Корзина</a>
   			</div>
   			<!-- Третья строчка -->
   			<nav class="main-navigation">
   				<ul class="site-navigation">
   					<li>
-  						<a class="site-navigation-menu">Каталог товаров</a>
-  						<ul class="site-navigation-sub-menu">
+  						<a class="site-navigation-menu" tabindex="0">Каталог товаров</a>
+  						<ul class="site-navigation-submenu">
   							<li><a href="#">Виртуальная реальность</a></li>
   							<li><a href="catalog.html">Моноподы для селфи</a></li>
   							<li><a href="#">Экшн-камеры</a></li>
@@ -35,21 +41,21 @@
   							<li><a href="#">Квадрокоптеры</a></li>
   						</ul>
   					</li>
-  					<li><a href="#">Доставка</a></li>
-  					<li><a href="#">Гарантия</a></li>
-  					<li><a href="#">Контакты</a></li>
+  					<li><a class="site-navigation-menu" href="#">Доставка</a></li>
+  					<li><a class="site-navigation-menu" href="#">Гарантия</a></li>
+  					<li><a class="site-navigation-menu" href="#">Контакты</a></li>
   				</ul>
   			</nav>
   		</header>
 
   		<main class="container">
-  			<h1 class="visual-hidden">Магазин современных гаджетов «<i class="device-name" lang="en">Device</i>»</h1>
+  			<h1 class="visually-hidden">Магазин современных гаджетов «<i class="device-name" lang="en">Device</i>»</h1>
   			<!-- Слайдер -->
   			<section class="slider">
-  				<h2 class="visual-hidden">Популярные товары</h2>
+  				<h2 class="visually-hidden">Популярные товары</h2>
   				<ol class="slider-goods-list">
   					<li class="slider-goods-item">
-  						<h3 class="visual-hidden">Палка для селфи</h3>
+  						<h3 class="visually-hidden">Палка для селфи</h3>
   						<p class="slider-goods-item-image">
   							<img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
   						</p>
@@ -73,7 +79,7 @@
   						<a class="btn" href="#">Подробнее</a>
   					</li>
   					<li class="slider-goods-item">
-  						<h3 class="visual-hidden">Фитнес-браслет</h3>
+  						<h3 class="visually-hidden">Фитнес-браслет</h3>
   						<p class="slider-goods-item-image">
   							<img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
   						</p>
@@ -93,7 +99,7 @@
   						<a class="btn" href="#">Подробнее</a>
   					</li>
   					<li class="slider-goods-item">
-  						<h3 class="visual-hidden">Квадрокоптер</h3> 
+  						<h3 class="visually-hidden">Квадрокоптер</h3> 
   						<p class="slider-goods-item-image">
   							<img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
   						</p>
@@ -118,7 +124,7 @@
   			</section>
   			<!-- Категории товаров -->
   			<section class="categories">
-  				<h2 class="visual-hidden">Категории товаров</h2>
+  				<h2 class="visually-hidden">Категории товаров</h2>
   				<ul class="categories-list">
   					<!-- Все картинки разного размера. (Узнать, как их всех правильно отцентровать) -->
   					<li class="category-item">
@@ -177,7 +183,7 @@
   			</section>
   			<!-- Второй слайдер -->
   			<section class="features-slider">
-  				<h2 class="visual-hidden">Преимущества магазина «<i class="device-name" lang="en">Device</i>»</h2>
+  				<h2 class="visually-hidden">Преимущества магазина «<i class="device-name" lang="en">Device</i>»</h2>
   				<!-- Навигация второго слайдера -->
   				<div class="features-navigation">
   					<ul>
@@ -204,7 +210,7 @@
   			</section>
   			<!-- Бренды -->
   			<section class="brands">
-  				<h2 class="visual-hidden">Бренды магазина «<span class="device-name" lang="en">Device</span>»</h2>
+  				<h2 class="visually-hidden">Бренды магазина «<span class="device-name" lang="en">Device</span>»</h2>
   				<ul class="brands-list">
   					<li class="brands-item">DJI</li>
   					<li class="brands-item">SP Gadgets</li>
@@ -269,7 +275,7 @@
 
     	<!-- Всплывающие окна -->
     	<section class="modal modal-write-us">
-    		<h2 class="visual-hidden">Форма обратной связи</h2>
+    		<h2 class="visually-hidden">Форма обратной связи</h2>
       		<form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
       			<label for="name">Ваше имя:</label>
       			<input type="text" name="name" id="name" placeholder="Имя Фамилия">
@@ -283,7 +289,7 @@
     	</section>
 
     	<section class="modal modal-map">
-    		<h2 class="visual-hidden">Как до нас добраться</h2>
+    		<h2 class="visually-hidden">Как до нас добраться</h2>
     		<p>
         		<img src="img/map-big.jpg" width="960" height="559" alt="Адрес магазина: Москва, ул. Строителей, 15">
       		</p>
