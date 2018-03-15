@@ -194,20 +194,10 @@
   			</section>
   			<!-- Второй слайдер -->
   			<section class="servises-slider">
-  				<h2 class="visually-hidden">Преимущества магазина «<i class="device-name" lang="en">Device</i>»</h2>
-  				<!-- Навигация второго слайдера -->
-  				<!--<div class="servises-navigation">
-  					<input class="visually-hidden" type="radio" name="servises" id="delivery" value="delivery" checked>
-  					<label class="btn servise-btn" for="delivery">Доставка</label>
-  					<input class="visually-hidden" type="radio" name="servises" id="warranty" value="warranty">
-  					<label class="btn servise-btn" for="warranty">Гарантия</label>
-  					<input class="visually-hidden" type="radio" name="servises" id="credit" value="credit">
-  					<label class="btn servise-btn" for="credit">Кредит</label>
-  				</div>-->
-  				<!-- Слайды -->
+  				<h2 class="visually-hidden">Услуги магазина «<i class="device-name" lang="en">Device</i>»</h2>
   				<ul class="servises-list">
   					<li class="servise-item">
-  						<input class="visually-hidden" type="radio" name="servises" id="delivery" value="delivery" checked>
+  						<input class="visually-hidden" type="radio" name="servises" id="delivery" value="delivery" tabindex="0" checked>
   						<label class="btn servise-btn" for="delivery">Доставка</label>
   						<article class="servise-item-content servise-item-delivery">
   							<h3 class="servise-item-title">Доставка</h3>
@@ -216,7 +206,7 @@
   						
   					</li>
   					<li class="servise-item">
-  						<input class="visually-hidden" type="radio" name="servises" id="warranty" value="warranty">
+  						<input class="visually-hidden" type="radio" name="servises" id="warranty" value="warranty" tabindex="0">
   						<label class="btn servise-btn" for="warranty">Гарантия</label>
   						<article class="servise-item-content servise-item-warranty">
   							<h3 class="servise-item-title">Гарантия</h3>
@@ -225,7 +215,7 @@
   						
   					</li>
   					<li class="servise-item">
-  						<input class="visually-hidden" type="radio" name="servises" id="credit" value="credit">
+  						<input class="visually-hidden" type="radio" name="servises" id="credit" value="credit" tabindex="0">
   						<label class="btn servise-btn" for="credit">Кредит</label>
   						<article class="servise-item-content servise-item-credit">
   							<h3 class="servise-item-title">Кредит</h3>
@@ -239,42 +229,45 @@
   			<section class="brands">
   				<h2 class="visually-hidden">Бренды магазина «<span class="device-name" lang="en">Device</span>»</h2>
   				<ul class="brands-list">
-  					<li class="brands-item">
+  					<li class="brand-item">
   						<img src="img/dji.jpg" width="260" height="100" alt="DJI">
   					</li>
-  					<li class="brands-item">
+  					<li class="brand-item">
   						<img src="img/sp-gadgets.jpg" width="260" height="100" alt="SP Gadgets">
   					</li>
-  					<li class="brands-item">
+  					<li class="brand-item">
   						<img src="img/gopro.jpg" width="260" height="100" alt="GoPro">
   					</li>
-  					<li class="brands-item">
+  					<li class="brand-item">
   						<img src="img/vive.jpg" width="260" height="100" alt="VIVE">
   					</li>
   				</ul>
   			</section>
-  			<!-- О НАС -->
-  			<section class="about-us">
-  				<h2>О нас</h2>
-  				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-  				<p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="upper" lang="en">Device</span> работает со многими транспортными компаниями:</p>
-  				<ul class="shipping-partners-list">
-  					<li class="shipping-partner-item">Деловые линии</li>
-  					<li class="shipping-partner-item">Автотрейдинг</li>
-  					<li class="shipping-partner-item">ЖелДорЭкспедиция</li>
-  				</ul>
-  				<a class="btn" href="#">Подробнее о нас</a>
-  			</section>
-  			<!-- Контакты -->
-  			<section class="contacts">
-  				<h2>Контакты</h2>
-  				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-  				<p class="contacts-map">
-  					<!-- Кликнув по карте откроется поп-ап с большой картой??? -->
-  					<a href="#"><img src="img/map.jpg" width="560" height="222" alt="Как к нам проехать"></a>
-  				</p>
-  				<a class="btn" href="#">Напишите нам</a>
-  			</section>
+  			
+  			<div class="index-columns">
+  				<!-- О НАС -->
+  				<section class="about-us">
+  					<h2>О нас</h2>
+  					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+  					<p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="upper" lang="en">Device</span> работает со многими транспортными компаниями:</p>
+  					<ul class="shipping-partners-list">
+  						<li class="shipping-partner-item">Деловые линии</li>
+  						<li class="shipping-partner-item">Автотрейдинг</li>
+  						<li class="shipping-partner-item">ЖелДорЭкспедиция</li>
+  					</ul>
+  					<a class="btn" href="#">Подробнее о нас</a>
+  				</section>
+  				<!-- Контакты -->
+  				<section class="contacts">
+  					<h2>Контакты</h2>
+  					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+  					<p class="contacts-map">
+  						<!-- Кликнув по карте откроется поп-ап с большой картой??? -->
+  						<a href="#"><img src="img/map.jpg" width="560" height="222" alt="Как к нам проехать"></a>
+  					</p>
+  					<a class="btn" href="#">Напишите нам</a>
+  				</section>
+  			</div>
   		</main>
 
     	<footer class="main-footer">
@@ -283,9 +276,9 @@
     			<a class="footer-logo">Device</a>
   				<ul class="user-navigation-footer">
     				<li class="login-link"><a href="#">Войти</a></li>
+    				<li><a class="compare" href="#">Сравнить</a></li>
+    				<li><a class="cart" href="#">Корзина</a></li>
     			</ul>
-    			<a class="compare" href="#">Сравнить</a>
-    			<a class="cart" href="#">Корзина</a>
     		</div>
     		<!-- Вторая строчка -->
   			<div class="footer-middle">

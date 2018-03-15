@@ -20,7 +20,7 @@
   				</form>
   				<ul class="user-navigation">
     				<li><a class="user-name">Валентин Петухов</a></li>
-    				<li><a class="login-link" href="#">Выйти</a></li>
+    				<li><a class="logout-link" href="#">Выйти</a></li>
     				<li><a class="compare" href="#">Сравнить</a></li>
     				<li><a class="cart" href="#">Корзина</a></li>
     			</ul>
@@ -50,7 +50,7 @@
   			<ul class="breadcrumbs">
     			<li><a href="index.html">Главная</a></li>
     			<li><a href="#">Каталог товаров</a></li>
-    			<li class="breadcrumbs-current">Моноподы для селфи</li>
+    			<li><a class="breadcrumbs-current">Моноподы для селфи</a></li>
     		</ul>
     		<!-- Форма фильтров товаров -->
     		<section class="filters">
@@ -109,8 +109,8 @@
     			</form>
     		</section>
     		<!-- Сортировка товаров -->
-    		<section>
-    			<h2>Сортировка</h2>
+    		<section class="ordering">
+    			<h2>Сортировка:</h2>
     			<ul>
     				<li><a class="order-by-price order-active">По цене</a></li>
     				<li><a class="order-by-type" href="#">По типу</a></li>
@@ -164,7 +164,7 @@
     			</ul>
     			<ul class="pagination-list">
     				<li class="pagination-item-step"><a href="#">Назад</a></li>
-    				<li class="pagination-item pagination-item-current"><a>1</a></li>
+    				<li class="pagination-item"><a class="pagination-item-current">1</a></li>
     				<li class="pagination-item"><a href="#">2</a></li>
     				<li class="pagination-item"><a href="#">3</a></li>
     				<li class="pagination-item-step"><a href="#">Вперед</a></li>
@@ -175,13 +175,14 @@
   		<footer class="main-footer">
     		<!-- Первая строчка -->
     		<div class="footer-top">
-    			<a class="footer-logo">Device</a>
+    			<a class="footer-logo logo-link" href="index.html">Device</a>
   				<ul class="user-navigation-footer">
-  					<li class="user-name"><a>Валентин Петухов</a></li>
-    				<li class="login-link"><a href="#">Выйти</a></li>
+  					<li><a class="user-name user-navigation-active">Валентин Петухов</a></li>
+    				<li><a class="logout-link" href="#">Выйти</a></li>
+    				<li><a class="compare user-navigation-active" href="#">Сравнить</a></li>
+    				<li><a class="cart user-navigation-active" href="#">Корзина</a></li>
     			</ul>
-    			<a class="compare" href="#">Сравнить</a>
-    			<a class="cart" href="#">Корзина</a>
+    			
     		</div>
     		<!-- Вторая строчка -->
   			<div class="footer-middle">
