@@ -40,8 +40,7 @@ a {
 	text-decoration: none;
 }
 
-.header-middle,
-.main-navigation {
+.main-header {
 	background-color: #f7e296;
 }
 
@@ -62,11 +61,41 @@ a {
 .logo-link:active {
 	opacity: 0.3;
 }
+/*Не работает*/
+input[type="search"]::-webkit-input-placeholder,
+input[type="search"]::-moz-placeholder,
+input[type="search"]:-moz-placeholder,
+input[type="search"]:-ms-input-placeholder {
+	font: inherit;
+	color: #000000;
+	opacity: 0.3;
+}
+
+.search-form input {
+	font: inherit;
+	vertical-align: middle;
+	color: rgba(0, 0, 0, 0.3);
+
+	background-color: transparent;
+	border: none;
+}
+
+.search-form input:hover {
+	color: rgba(0, 0, 0, 0.6);
+
+}
+
+.search-form input:focus {
+	color: #000000;
+
+	border-bottom: 2px solid #000000;
+}
 
 .search-button {
 	font: inherit;
 	text-align: center;
 	vertical-align: middle;
+	color: #000000;
 
 	background-color: transparent;
 	border: 2px solid #000000;
@@ -83,25 +112,6 @@ a {
 	color: rgba(255, 255, 255, 0.3);;
 }
 
-.search-form input {
-	font: inherit;
-	vertical-align: middle;
-	color: rgba(0, 0, 0, 0.3);
-
-	background-color: transparent;
-	border: none;
-}
-
-.search-form input:hover {
-	color: rgba(0, 0, 0, 0.6);
-
-}
-/* Непонятно, как менять цвет при наведении у placeholder в input. Поэтому вместо placeholder="Поиск по сайту" поставил value="Поиск по сайту" */
-.search-form input:focus {
-	color: #000000;
-
-	border-bottom: 2px solid #000000;
-}
 
 .user-navigation,
 .site-navigation,
@@ -114,31 +124,35 @@ a {
 	color: #000000;
 }
 
-.user-navigation a:hover:not(.user-name),
+.user-navigation a:hover,
 .user-navigation a:focus,
-.site-navigation a:hover,
+.site-navigation a:hover:not(.submenu-active),
 .site-navigation a:focus  {
 	opacity: 0.6;
 }
 
-.user-navigation a:active:not(.user-name),
-.site-navigation a:active  {
+.user-navigation a:active,
+.site-navigation a:active:not(.submenu-active)  {
 	opacity: 0.3;
 }
 
-.user-navigation .logout-link {
+.user-name {
+	color: #000000;
+}
+
+.logout-link a {
 	opacity: 0.3;
 }
 
-.user-navigation a.logout-link:hover {
+.logout-link a:hover {
 	opacity: 0.6;
 }
 
-.user-navigation a.logout-link:active {
+.logout-link a:active {
 	opacity: 1;
 }
 
-.site-navigation-menu {
+.site-navigation-menu > a {
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 700;
@@ -147,45 +161,34 @@ a {
 	letter-spacing: 2px;
 }
 
-/* Это все ради белого порядкового намера в списке? Подумать! */
+.site-navigation-submenu a {
+	line-height: 36px;
+}
+
 .popular-list{
 	list-style: none;
 }
-/*
-.popular-item {
-	color: #464646;
-}
-*/
 
 .popular-item-slogan {
+	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 47px;
 	font-weight: 700;
 	line-height: 56px;
 	color: #000000;
 }
 
-.popular-item-desc {
-	font-family: "Open Sans", Arial, sans-serif;
-	font-size: 15px;
-	font-weight: 300;
-	line-height: 30px;
-	color: #464646;
-}
-
-.popular-item-spec th {
-	font-family: "Open Sans", Arial, sans-serif;
-	font-size: 13px;
-	font-weight: 300;
-	line-height: 20px;
-	color: #464646;
-}
-
-.popular-item-spec tr {
+.popular-item-spec td {
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 36px;
 	font-weight: 300;
 	line-height: 48px;
 	color: #000000;
+}
+
+.popular-item-spec th {
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 20px;
 }
 
 .btn {
@@ -214,6 +217,10 @@ a {
 	color: rgba(0, 0, 0, 0.3);
 }
 
+.slides-switches {
+	list-style: none;
+}
+
 .categories-list {
 	list-style: none;
 }
@@ -228,13 +235,18 @@ a {
 	background-color: #ffffff;
 }
 
-.category-item-image {
+.category-item-image,
+.category-item-image{
 	background-color: #f7e296;
 }
 
-.category-item-image:hover,
-.category-item-image:active {
+.category-item a:hover .category-item-image,
+.category-item a:focus .category-item-image {
 	background-color: #f0c52e;
+}
+
+.category-item a:active img {
+	opacity: 0.3;
 }
 
 .servises-slider {
@@ -259,11 +271,11 @@ a {
 	background-image: none;
 	background-color: #000000;
 }
-/* Стоит подумать!!!
-.servise-item input:focus + .servise-btn {
-	outline: blue auto 5px;
+
+.servise-item-content {
+	border-left: 7px solid #000000;
 }
-*/
+
 .servise-item-content h3 {
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 47px;
@@ -325,38 +337,18 @@ a {
 	opacity: 0.7;
 }
 
-.user-navigation-footer a:hover:not(.user-name),
+.user-navigation-footer a:hover,
 .user-navigation-footer a:focus {
 	opacity: 1;
 }
 
-.user-navigation-footer a:active:not(.user-name) {
+.user-navigation-footer a:active {
 	opacity: 0.3;
 }
 
-.user-navigation-footer .logout-link {
-	opacity: 0.3;
-}
-
-.user-navigation-footer a.logout-link:hover {
-	opacity: 0.6;
-}
-
-.user-navigation-footer a.logout-link:active {
-	opacity: 1;
-}
-
-.user-navigation-footer .user-navigation-active {
-	opacity: 1;
-}
-
-.user-navigation-footer .user-navigation-active:hover:not(.user-name),
-.user-navigation-footer .user-navigation-active:focus {
-	opacity: 0.6;
-}
-
-.user-navigation-footer .user-navigation-active:active:not(.user-name) {
-	opacity: 0.3;
+.user-name-footer {
+	color: #ffffff;
+	opacity: 0.7;
 }
 
 .site-navigation-footer {
@@ -411,39 +403,6 @@ a {
 
 .social-btn:active {
 	color: rgba(255, 255, 255, 0.1);
-}
-
-.write-us-form label {
-	font-family: "Gilroy", Arial, sans-serif;
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 24px;
-	text-transform: none;
-}
-
-.write-us-form input,
-.write-us-form textarea {
-	font-family: "Open Sans", Arial, sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 18px;
-	color: rgba(70, 70, 70, 0.4);
-
-	background-color: #f2f2f2;
-	border: none;
-}
-
-.write-us-form input:hover,
-.write-us-form textarea:hover {
-	background-color: #eaeaea;
-}
-
-.write-us-form input:focus,
-.write-us-form textarea:focus {
-	color: #464646;
-
-	background-color: #ffffff;
-	border: 3px solid #f0c52e;
 }
 
 .page-title {
@@ -518,6 +477,10 @@ a {
 	color: #a6a6a6;
 }
 
+.ordering-list {
+	list-style: none;
+}
+
 .ordering {
 	font-size: 14px;
 	line-height: 18px;
@@ -527,22 +490,18 @@ a {
 	background-color: rgba(0, 0, 0, 0.08);
 }
 
-.ordering a:not(.order-active) {
+.ordering a {
 	color: #000000;
 	opacity: 0.3;
 }
 
-.ordering a:hover:not(.order-active),
+.ordering a:hover,
 .ordering a:focus {
 	opacity: 0.6;
 }
 
-.ordering a:active:not(.order-active) {
+.ordering a:active {
 	opacity: 1;
-}
-
-.ordering ul {
-	list-style: none;
 }
 
 .catalog-list {
@@ -564,19 +523,19 @@ a {
 	line-height: 24px;
 }
 
-.compare {
+.compare-item {
 	font-size: 13px;
 	line-height: 20px;
 	color: #000000;
 	opacity: 0.5;
 }
 
-.compare:hover,
-.compare:focus {
+.compare-item:hover,
+.compare-item:focus {
 	opacity: 1;
 }
 
-.compare:active {
+.compare-item:active {
 	opacity: 0.2;
 }
 
@@ -596,7 +555,7 @@ a {
 	color: #000000;
 }
 
-.pagination-item-step a:hover,
+.pagination-item-step a:hover:not(.pagination-item-current),
 .pagination-item-step a:focus {
 	background-color: rgba(0, 0, 0, 0.08);
 }
@@ -617,4 +576,43 @@ a {
 
 .pagination-item a:active:not(.pagination-item-current) {
 	color: #000000;
+}
+
+.write-us-form label {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	text-transform: none;
+}
+
+.write-us-form input,
+.write-us-form textarea {
+	font: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	color: rgba(70, 70, 70, 0.4);
+
+	background-color: #f2f2f2;
+	border: none;
+}
+
+.write-us-form input:hover,
+.write-us-form textarea:hover {
+	background-color: #eaeaea;
+}
+
+.write-us-form input:focus,
+.write-us-form textarea:focus {
+	color: #464646;
+
+	background-color: #ffffff;
+	border: 3px solid #f0c52e;
+}
+
+.write-us-form input:invalid {
+	color: rgba(70, 70, 70, 0.4);
+
+	background-color: #f6dada;
 }
