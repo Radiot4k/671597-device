@@ -61,7 +61,7 @@ a {
 .logo-link:active {
 	opacity: 0.3;
 }
-/*Не работает*/
+/*Не работает!!!*/
 input[type="search"]::-webkit-input-placeholder,
 input[type="search"]::-moz-placeholder,
 input[type="search"]:-moz-placeholder,
