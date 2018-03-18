@@ -70,13 +70,15 @@
   			<!-- Слайдер -->
   			<section class="popular">
   				<h2 class="visually-hidden">Популярные товары</h2>
+                <input class="visually-hidden" type="radio" name="slides-switcher" id="first-switcher" value="first-slide" checked>
+                <input class="visually-hidden" type="radio" name="slides-switcher" id="second-switcher" value="second-slide">
+                <input class="visually-hidden" type="radio" name="slides-switcher" id="third-switcher" value="third-slide">
+                <ul class="slider-switchers">
+                    <li class="switcher"><label for="first-switcher">Первый слайд</label></li>
+                    <li class="switcher"><label for="second-switcher">Второй слайд</label></li>
+                    <li class="switcher"><label for="third-switcher">Третий слайд</label></li>
+                </ul>
   				<ol class="popular-list">
-                    <input class="visually-hidden" type="radio" name="slides-switcher" id="first-switcher" value="first-slide" checked>
-                    <label for="first-switcher">Первый слайд</label>
-                    <input class="visually-hidden" type="radio" name="slides-switcher" id="second-switcher" value="second-slide">
-                    <label for="second-switcher">Второй слайд</label>
-                    <input class="visually-hidden" type="radio" name="slides-switcher" id="third-switcher" value="third-slide">
-                    <label for="third-switcher">Третий слайд</label>
   					<li class="popular-item slider-1">
   						<h3 class="visually-hidden">Палка для селфи</h3>
   						<div class="popular-item-image">
@@ -219,34 +221,30 @@
   			<!-- Второй слайдер -->
   			<section class="servises-slider">
   				<h2 class="visually-hidden">Услуги магазина «<span class="device-name" lang="en">Device</span>»</h2>
-  				<ul class="servises-list">
-  					<li class="servise-item">
-  						<input class="visually-hidden" type="radio" name="servises" id="delivery" value="delivery" checked>
-  						<label class="btn servise-btn" for="delivery">Доставка</label>
-  						<article class="servise-item-content servise-item-delivery">
-  							<h3 class="servise-item-title">Доставка</h3>
-  							<p class="servise-item-desc">Мы с удовольствием доставим ваш товар пярмо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-  						</article>
-  						
-  					</li>
-  					<li class="servise-item">
-  						<input class="visually-hidden" type="radio" name="servises" id="warranty" value="warranty">
-  						<label class="btn servise-btn" for="warranty">Гарантия</label>
-  						<article class="servise-item-content servise-item-warranty">
-  							<h3 class="servise-item-title">Гарантия</h3>
-  							<p class="servise-item-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-  						</article>
-  						
-  					</li>
-  					<li class="servise-item">
-  						<input class="visually-hidden" type="radio" name="servises" id="credit" value="credit">
-  						<label class="btn servise-btn" for="credit">Кредит</label>
-  						<article class="servise-item-content servise-item-credit">
-  							<h3 class="servise-item-title">Кредит</h3>
-  							<p class="servise-item-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-  						</article>
-  					</li>
-  				</ul>
+                <div class="container">
+                    <input class="visually-hidden" type="radio" name="servises" id="delivery" value="delivery" checked>
+                    <input class="visually-hidden" type="radio" name="servises" id="warranty" value="warranty">
+                    <input class="visually-hidden" type="radio" name="servises" id="credit" value="credit">
+                    <ul class="servises-list-menu">
+                        <li><label class="btn servise-btn" for="delivery">Доставка</label></li>
+                        <li><label class="btn servise-btn" for="warranty">Гарантия</label></li>
+                        <li><label class="btn servise-btn" for="credit">Кредит</label></li>
+                    </ul>
+                    <ul class="servises-list">
+                        <li class="servise-item">
+                            <h3 class="servise-item-title">Доставка</h3>
+                            <p class="servise-item-desc">Мы с удовольствием доставим ваш товар пярмо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                        </li>
+                        <li class="servise-item">
+                            <h3 class="servise-item-title">Гарантия</h3>
+                            <p class="servise-item-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                        </li>
+                        <li class="servise-item">
+                            <h3 class="servise-item-title">Кредит</h3>
+                            <p class="servise-item-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                        </li>
+                    </ul>
+                </div>
   			</section>
   			<!-- Бренды -->
   			<section class="brands">

@@ -297,6 +297,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .popular {
+	position: relative;
 	width: 1160px;
 	margin: 0 auto;
 	margin-bottom: 100px;
@@ -305,7 +306,6 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .popular-list{
-	position: relative;
 	margin: 0;
 	padding: 0;
 	min-height: 495px;
@@ -316,20 +316,26 @@ input[type="search"]:-ms-input-placeholder {
 	display: none;
 }
 
-.popular-list input:first-of-type:checked ~ .popular-item.slider-1,
-.popular-list input:nth-of-type(2):checked ~ .popular-item.slider-2,
-.popular-list input:last-of-type:checked ~ .popular-item.slider-3 {
+.popular input:first-of-type:checked ~ .popular-list li:first-child,
+.popular input:nth-of-type(2):checked ~ .popular-list li:nth-child(2),
+.popular input:last-of-type:checked ~ .popular-list li:last-child {
 	display: flex;
 }
 
-.popular-list label {
+.slider-switchers {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.switcher label {
 	position: absolute;
 	bottom: 135px;
     right: 161px;
 	font-size: 0;
 }
 
-.popular-list label::before {
+.switcher label::before {
 	content: "";
 	position: absolute;
 	width: 12px;
@@ -342,19 +348,21 @@ input[type="search"]:-ms-input-placeholder {
     z-index: 10;
 }
 
-.popular-list label:first-of-type::before {
+.switcher:first-child label::before {
 	left: 0;
 }
 
-.popular-list label:nth-of-type(2)::before {
+.switcher:nth-child(2) label::before {
 	left: 33px;
 }
 
-.popular-list label:last-of-type::before {
+.switcher:last-child label::before {
 	left: 66px;
 }
 
-.popular-list input:checked + label::before {
+.popular input:first-of-type:checked ~ .slider-switchers li:first-child label::before,
+.popular input:nth-of-type(2):checked ~ .slider-switchers li:nth-child(2) label::before,
+.popular input:last-of-type:checked ~ .slider-switchers li:last-child label::before {
 	background-image: url(../img/slider-button.svg);
 }
 
@@ -444,7 +452,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .categories {
-    margin-bottom: 80px;
+    margin-bottom: 180px;
 }
 
 .categories-list {
@@ -502,38 +510,86 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .servises-slider {
-	background-color: #ffffff;
-}
-
-.servises-list {
-	list-style: none;
-
 	background-color: #e5e5e5;
 }
 
-.servise-btn {
-	padding: 8px 25px;
+.servises-slider .container {
+    display: flex;
+    min-height: 288px;
 }
 
-.servise-item input:checked + .servise-btn {
-	padding-right: 143px;
+.servises-list-menu {
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+    list-style: none;
+    transform: translateY(-32px);
+}
 
+.servises-list-menu::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 319px;
+    background-color: #000000;
+    transform: translate(278px, -68px);
+}
+
+.servises-list {
+	margin: 0;
+	margin-right: 20px;
+    padding: 0;
+	list-style: none;
+	transform: translateY(-27px);
+}
+
+.servise-btn {
+	width: 160px;
+	margin: 12px 0;
+	padding: 8px 0;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.servises-slider input:first-of-type:checked ~ .servises-list-menu li:first-child .servise-btn,
+.servises-slider input:nth-of-type(2):checked ~ .servises-list-menu li:nth-child(2) .servise-btn,
+.servises-slider input:last-of-type:checked ~ .servises-list-menu li:last-child .servise-btn {
+	width: 278px;
+	padding-left: 20px;
 	color: #f7e184;
-
+	text-align: left;
 	background-image: none;
 	background-color: #000000;
+	cursor: default;
 }
 
-.servise-item-content {
-	border-left: 7px solid #000000;
+.servise-item {
+	display: none;
+	margin-left: 124px;
 }
 
-.servise-item-content h3 {
+.servises-slider input:first-of-type:checked ~ .servises-list li:first-child,
+.servises-slider input:nth-of-type(2):checked ~ .servises-list li:nth-child(2),
+.servises-slider input:last-of-type:checked ~ .servises-list li:last-child {
+	display: block;
+}
+
+.servise-item h3 {
+	margin: 0;
+	margin-bottom: 30px;
+    padding: 0;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 47px;
 	line-height: 48px;
 	font-weight: 700;
 	color: #000000;
+}
+
+.servise-item-desc {
+	width: 450px;
+	margin: 0;
+    padding: 0;
 }
 
 .brands-list {
