@@ -43,6 +43,9 @@ a {
 .container {
 	width: 1160px;
 	margin: 0 auto;
+}
+
+.main-header {
 	padding: 0 20px;
 }
 
@@ -75,6 +78,7 @@ a {
 .header-middle {
 	display: flex;
 	align-items: baseline;
+	margin: 0;
 	margin-top: 40px;
 	padding: 37px 60px 25px;
 	background-color: #f7e296;
@@ -194,6 +198,7 @@ input[type="search"]:-ms-input-placeholder {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 60px 45px;
+	margin: 0;
 	background-color: #f7e296;
 }
 
@@ -253,10 +258,10 @@ input[type="search"]:-ms-input-placeholder {
 .nav-submenu-wrap {
 	display: none;
 	position: absolute;
-    top: 22px;
+    top: 25px;
     left: -60px;
     background-color: #f7e296;
-    padding: 16px 60px 43px;
+    padding: 16px 60px 40px;
     width: 1040px;
     z-index: 10;
 }
@@ -282,7 +287,8 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .popular {
-	margin: 0;
+	width: 1160px;
+	margin: 0 auto;
     padding: 0;
 	background-image: linear-gradient(to bottom, #f7e296 115px, transparent 115px);
 }
