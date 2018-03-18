@@ -41,12 +41,13 @@ a {
 }
 
 .container {
-	width: 1160px;
-	margin: 0 auto;
+	width: 1200px;
+    margin: 0 auto;
 }
 
-.main-header {
-	padding: 0 20px;
+.header-wrap {
+	margin: 0 20px;
+	background-color: #f7e296;
 }
 
 .header-top {
@@ -81,7 +82,7 @@ a {
 	margin: 0;
 	margin-top: 40px;
 	padding: 37px 60px 25px;
-	background-color: #f7e296;
+	
 }
 
 /*Не работает!!!*/
@@ -99,10 +100,12 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .search-form input {
+	width: 355px;
+	padding: 8px 18px;
 	font: inherit;
 	vertical-align: middle;
 	color: rgba(0, 0, 0, 0.3);
-
+	box-sizing: border-box;
 	background-color: transparent;
 	border: none;
 }
@@ -119,6 +122,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .search-button {
+	visibility: hidden;
 	margin: 0;
 	padding: 7px 18px;
 	font: inherit;
@@ -128,17 +132,23 @@ input[type="search"]:-ms-input-placeholder {
 
 	background-color: transparent;
 	border: 2px solid #000000;
+	transform: translateX(-5px);
+}
+
+.search-form input:focus + .search-button {
+	visibility: visible;
 }
 
 .search-button:hover,
 .search-button:focus {
 	color: #ffffff;
-
+	visibility: visible;
 	background-color: #000000;
 }
 
-.search-button:active{
-	color: rgba(255, 255, 255, 0.3);;
+.search-button:active {
+	visibility: visible;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .user-nav,
@@ -198,7 +208,6 @@ input[type="search"]:-ms-input-placeholder {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 60px 45px;
-	margin: 0;
 	background-color: #f7e296;
 }
 
