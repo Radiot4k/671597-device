@@ -462,11 +462,9 @@ input[type="search"]:-ms-input-placeholder {
 .category-item a {
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
 }
 
 .category-item h3 {
-	align-self: flex-start;
 	margin: 0;
 	padding: 0;
 	font-family: "Gilroy", Arial, sans-serif;
