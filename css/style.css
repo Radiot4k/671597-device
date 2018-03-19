@@ -511,6 +511,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .servises-slider {
+	margin-bottom: 95px;
 	background-color: #e5e5e5;
 }
 
@@ -594,7 +595,19 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .brands-list {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 20px;
+	padding: 0;
 	list-style: none;
+}
+
+.brand-item img {
+    filter: grayscale(1) opacity(0.2);
+}
+
+.brand-item img:hover {
+    filter: grayscale(0) opacity(1);
 }
 
 .about-us h2,
