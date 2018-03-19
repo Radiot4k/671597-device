@@ -2,6 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Девайс</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
@@ -332,17 +333,25 @@
         <section class="modal modal-write-us">
             <h2 class="visually-hidden">Форма обратной связи</h2>
             <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-                <label for="name">Ваше имя:</label>
-                <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-                <label for="e-mail">Ваш e-mail:</label>
-                <input type="email" name="e-mail" id="e-mail" placeholder="email@example.com">
-                <label for="text">Текст письма:</label>
-                <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
+                <div class="write-us-wrap">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+                </div>
+                <div class="write-us-wrap">
+                    <label for="e-mail">Ваш e-mail:</label>
+                    <input type="email" name="e-mail" id="e-mail" placeholder="email@example.com">
+                </div>
+                <div class="write-us-wrap">
+                    <label for="text">Текст письма:</label>
+                    <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
+                </div>
                 <button class="btn" type="submit">Отправить</button>
             </form>
             <button class="modal-close" type="button">Закрыть</button>
         </section>
 
+
+        <!-- Карта -->
         <section class="modal modal-map">
             <h2 class="visually-hidden">Как до нас добраться</h2>
             <p>
