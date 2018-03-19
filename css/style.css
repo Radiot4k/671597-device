@@ -96,7 +96,9 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .search-form {
+	margin: 0;
 	margin-right: auto;
+	padding: 0;
 }
 
 .search-form input {
@@ -298,10 +300,9 @@ input[type="search"]:-ms-input-placeholder {
 
 .popular {
 	position: relative;
-	width: 1160px;
-	margin: 0 auto;
+	margin: 0 20px;
 	margin-bottom: 100px;
-    padding: 0;
+	padding: 0;
 	background-image: linear-gradient(to bottom, #f7e296 115px, transparent 115px);
 }
 
@@ -514,7 +515,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .servises-slider .container {
-    display: flex;
+	display: flex;
     min-height: 288px;
 }
 
