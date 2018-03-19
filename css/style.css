@@ -767,8 +767,7 @@ input[type="search"]:-ms-input-placeholder {
 	display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /*flex-basis: 700px;*/
-	margin: 0;
+	margin: 0 auto;
     padding: 0;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 18px;
@@ -781,7 +780,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .site-nav-footer li {
-    margin-right: 40px;
+    margin: 0 20px;
 }
 
 .site-nav-footer a {
@@ -799,12 +798,15 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .footer-contacts {
+	flex-basis: 250px;
     margin: 0;
     padding: 0;
 }
 
 .footer-contacts-phone {
+	flex-basis: 250px;
 	color: #ffffff;
+	text-align: right;
 }
 
 .footer-contacts-phone:hover,
@@ -836,13 +838,13 @@ input[type="search"]:-ms-input-placeholder {
 .footer-social {
 	display: flex;
     justify-content: center;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	list-style: none;
 }
 
 .footer-social li {
-    margin-right: 20px;
+    margin: 0px 10px;
 }
 
 .social-btn {
@@ -879,12 +881,13 @@ input[type="search"]:-ms-input-placeholder {
 
 .academy-logo {
 	display: block;
-    width: 27px;
+    width: 80px;
     height: 35px;
     font-size: 0;
     filter: #ffc600;
     background-image: url(../img/logo-html.svg);
     background-repeat: no-repeat;
+    background-position: right;
 }
 
 .academy-logo:hover,
