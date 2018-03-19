@@ -47,24 +47,19 @@ a {
 
 .header-wrap {
 	margin: 0 20px;
+	margin-top: 40px;
 	background-color: #f7e296;
 }
 
-.header-top {
-	margin: 0;
-	padding: 0;
-	position: relative;
-}
 .main-logo {
 	position: absolute;
-	top: -24px;
-	left: 60px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 48px;
 	font-weight: 700;
 	line-height: 48px;
 	color: #000000;
 	text-transform: uppercase;
+	transform: translate(60px, -24px);
 }
 
 .logo-link:hover,
