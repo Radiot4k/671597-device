@@ -863,62 +863,13 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .catalog-wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.filters {
-	font-size: 14px;
-	line-height: 40px;
-	color: #000000; 
-	background-color: rgba(0, 0, 0, 0.08);
-}
-
-.filters h2,
-.ordering h2 {
-	margin: 0 60px;
-	margin-right: 55px;
-	padding: 0;
-	font-family: "Gilroy", Arial, sans-serif;
-	font-size: 16px;
-	font-weight: 700;
-	line-height: 24px;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-}
-
-.filters ul {
-	list-style: none;
-}
-
-.filter fieldset {
-  border: none;
-}
-
-.filter legend {
-	font-family: "Gilroy", Arial, sans-serif;
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 24px;
-}
-
-.output-area {
-	font-family: "Gilroy", Arial, sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 24px;
-	opacity: 0.2;
-}
-
-.filter-option input:disabled + label {
-	color: #a6a6a6;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.08) 33.3%, transparent 33.3%);
 }
 
 .ordering {
-	order: -1;
 	margin: 0;
-	padding: 23px 0;
-	width: 100%;
+	padding-top: 24px;
+    padding-bottom: 22px;
 	font-size: 14px;
 	line-height: 18px;
 	font-weight: 400;
@@ -927,7 +878,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .container-70 {
-    width: 70%;
+    width: 760px;
     margin-left: auto;
     padding-left: 20px;
 }
@@ -951,17 +902,17 @@ input[type="search"]:-ms-input-placeholder {
 	margin-right: 30px;
 }
 
-.ordering a {
+.ordering a:not(.ordering-current) {
 	color: #000000;
 	opacity: 0.3;
 }
 
-.ordering a:hover,
+.ordering a:hover:not(.ordering-current),
 .ordering a:focus {
 	opacity: 0.6;
 }
 
-.ordering a:active {
+.ordering a:active:not(.ordering-current) {
 	opacity: 1;
 }
 
@@ -982,15 +933,14 @@ input[type="search"]:-ms-input-placeholder {
     opacity: 0.2;
 }
 
-.order-by-down a:hover::before,
+.order-by-down a:hover:not(.ordering-current)::before,
 .order-by-down a:focus::before {
 	opacity: 0.4;
 }
 
-.order-by-down a:active::before {
+.order-by-down a:active:not(.ordering-current)::before {
 	opacity: 1;
 }
-
 
 .order-by-up::before {
     content: "";
@@ -1003,11 +953,142 @@ input[type="search"]:-ms-input-placeholder {
     background-position: right center;
 }
 
-.catalog-list {
+.columns-1-3 {
+    display: flex;
+}
+
+.filters {
+	padding-left: 60px;
+    transform: translateY(-67px);
+	font-size: 14px;
+	line-height: 40px;
+	color: #000000; 
+	transform: translateY(-45px);
+}
+
+.filters h2,
+.ordering h2 {
+	margin: 0;
+	margin-right: 55px;
+	padding: 0;
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.filters h2 {
+    margin-bottom: 100px;
+}
+
+.filters ul {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
+.filter fieldset {
+	margin: 0;
+	margin-bottom: 35px;
+	padding: 0;
+	border: none;
+}
+
+.filter legend {
+	margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.filter legend::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: #000000;
+    transform: translateY(-10px);
+}
+
+.output-area {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+	opacity: 0.2;
+}
+
+.filter-option input:disabled + label {
+	color: #a6a6a6;
+}
+
+.catalog {
+
+}
+
+.catalog-list-wrap {
+}
+
+.catalog-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 70px;
+    padding: 0;
+	list-style: none;
+}
+
+.catalog-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    width: 360px;
+    margin-bottom: 45px;
+}
+
+.catalog-item:hover .catalog-item-action {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.catalog-item-new::before {
+	content: "new";
+    position: absolute;
+    top: 29px;
+    right: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    height: 59px;
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 1;
+}
+
 .catalog-item h3 {
+	width: 260px;
+	margin: 0;
+    padding: 0;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 700;
@@ -1015,11 +1096,35 @@ input[type="search"]:-ms-input-placeholder {
 	color: #000000;
 }
 
+.catalog-item-image {
+    order: -1;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
 .catalog-item-price {
+	margin: 0;
+    padding: 0;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 24px;
+}
+
+.catalog-item-action {
+	position: absolute;
+	top: 0;
+	left: 0;
+    display: none;
+    width: 360px;
+    height: 380px;
+    background-color: rgba(238, 238, 238, 0.7);
+}
+
+.catalog-item-action .btn {
+	margin-bottom: 40px;
+	transform: translateY(25px);
 }
 
 .compare-item {
@@ -1039,14 +1144,34 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .pagination-list {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	margin-bottom: 77px;
+    padding: 0;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 700;
+	text-transform: uppercase;
 	line-height: 24px;
+	letter-spacing: 3px;
 	color: #000000;
 
 	list-style: none;
 	background-color: rgba(0, 0, 0, 0.08);
+}
+
+.pagination-item-step a {
+	display: inline-block;
+	padding: 23px 30px;
+}
+
+.pagination-item-step:first-child {
+	margin-right: auto;
+}
+
+.pagination-item-step:last-child {
+	margin-left: auto;
 }
 
 .pagination-item-step a,
@@ -1059,9 +1184,13 @@ input[type="search"]:-ms-input-placeholder {
 	background-color: rgba(0, 0, 0, 0.08);
 }
 
-.pagination-item-step a:active {
+.pagination-item-step a:active:not(.pagination-item-current) {
 	color: rgba(0, 0, 0, 0.3);
 	background-color: rgba(0, 0, 0, 0.08);
+}
+
+.pagination-item {
+	margin: 0 15px;
 }
 
 .pagination-item a:not(.pagination-item-current) {
