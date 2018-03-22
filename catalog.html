@@ -111,12 +111,21 @@
                             <fieldset>
                                 <legend>Стоимость</legend>
                                 <div class="range-filter">
-                                    <input class="visually-hidden filter-input-range" type="range" name="count_from" min="0" max="9000" id="filter-count-from" value="0">
+                                    <input class="visually-hidden filter-input-range" type="range" name="count_from" min="0" max="4500" id="filter-count-from" value="0">
                                     <input class="visually-hidden filter-input-range" type="range" name="count_to" min="0" max="9000" id="filter-count-to" value="5000">
                                     <label class="visually-hidden" for="filter-count-from">Минимальная стоимость</label>
                                     <label class="visually-hidden" for="filter-count-to">Максимальная стоимость</label>
+                                    <div class="range-controls">
+                                        <div class="scale">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="toggle toggle-min"></div>
+                                        <div class="toggle toggle-max"></div>
+                                    </div>
                                     <div class="output-area">
                                         от <output name="output_from">0</output>
+                                    </div>
+                                    <div class="output-area">
                                         до <output name="output_to">5000</output>
                                     </div>
                                 </div>
