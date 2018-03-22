@@ -99,20 +99,24 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 }
 
-.search-forminput input[type="search"]::-webkit-input-placeholder {
+.search-form-input::-webkit-input-placeholder {
 	font: inherit;
 	color: #000000;
 	opacity: 0.3;
 }
 
-.search-forminput input[type="search"]:hover::-webkit-input-placeholder {
+.search-form-input:hover::-webkit-input-placeholder {
 	opacity: 0.6;
+}
+
+.search-form-input:focus::-webkit-input-placeholder {
+	opacity: 1;
 }
 
 .search-form input {
 	box-sizing: border-box;
 	width: 355px;
-	height: 48px; /*Для IE*/
+	height: 48px;
 	padding: 8px 36px;
 	font: inherit;
 	vertical-align: middle;
@@ -134,7 +138,6 @@ input[type="radio"].visually-hidden {
 
 .search-form input:focus {
 	color: #000000;
-
 	border-bottom: 2px solid #000000;
 }
 
@@ -208,12 +211,12 @@ input[type="radio"].visually-hidden {
 .main-nav-menu:hover > a,
 .main-nav-menu a:hover,
 .main-nav-menu a:focus  {
-	color: rgba(0, 0, 0, 0.6);
+	opacity: 0.6;
 }
 
 .minor-nav a:active,
 .main-nav-menu a:active {
-	color: rgba(0, 0, 0, 0.3);
+	opacity: 0.3;
 }
 
 .user-nav li{
@@ -264,11 +267,11 @@ input[type="radio"].visually-hidden {
 	padding-right: 25px;
 }
 
-.big-menu::after {
+.catalog-nav .main-nav-menu::after {
 	content: "";
 	position: absolute;
-	top: 3px;
-    right: 0px;
+	top: 6px;
+    right: 0;
 	width: 16px;
 	height: 16px;
 	background-color: transparent;
@@ -324,7 +327,7 @@ input[type="radio"].visually-hidden {
 }
 
 .nav-submenu-wrap {
-	display: none;
+	display: flex;
 	position: absolute;
     top: 26px;
     left: -60px;
@@ -332,12 +335,13 @@ input[type="radio"].visually-hidden {
     padding: 16px 60px 40px;
     width: 1040px;
     z-index: 10;
+    transform: scaleY(0);
+    transform-origin: top;
 }
 
 .main-nav-menu:hover .nav-submenu-wrap,
-.main-nav-menu a:focus + .nav-submenu-wrap,
-.main-nav-menu a:active + .nav-submenu-wrap {
-	display: flex;
+.main-nav-menu a:focus + .nav-submenu-wrap {
+	transform: scaleY(1);
 }
 
 .catalog-nav-submenu a {
@@ -380,8 +384,8 @@ input[type="radio"].visually-hidden {
 
 .slider-switchers {
 	position: absolute;
-	right: 100px;
-	bottom: 0;
+	right: 80px;
+	bottom: -20px;
 	display: flex;
 	margin: 0;
 	padding: 0;
@@ -390,12 +394,17 @@ input[type="radio"].visually-hidden {
 }
 
 .switcher {
-	margin-left: 33px;
+	margin-left: 13px;
+}
+
+.switcher label {
+    display: block;
+    cursor: pointer;
 }
 
 .switcher label::before {
 	content: "";
-	position: absolute;
+	display: block;
 	width: 20px;
 	height: 20px;
 	background-image: url(../img/slider-button-empty.svg);
@@ -403,7 +412,6 @@ input[type="radio"].visually-hidden {
 	background-size: 12px 12px;
 	background-position: center;
 	border-radius: 50%;
-	cursor: pointer;
     z-index: 10;
 }
 
@@ -458,11 +466,11 @@ input[type="radio"].visually-hidden {
     right: 48px;
 }
 
-.slider-2 .popular-item-desc::after {
+.popular-item:nth-child(2) .popular-item-desc::after {
     content: "02";
 }
 
-.slider-3 .popular-item-desc::after {
+.popular-item:nth-child(3) .popular-item-desc::after {
     content: "03";
 }
 
@@ -513,8 +521,6 @@ input[type="radio"].visually-hidden {
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	background-color: transparent;
-	background-image: linear-gradient(to bottom, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
-    background-position: center;
 	border: none;
 }
 
@@ -526,6 +532,7 @@ input[type="radio"].visually-hidden {
     width: 100%;
     height: 8px;
     background-color: #f0c52e;
+    transition: transform 0.1s ease-out 0s;
     z-index: -1;
 }
 
@@ -587,6 +594,7 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 35px;
 	padding: 0;
 	background-color: #f7e296;
+	transition: background-color 0.1s ease-out 0s;
 }
 
 .category-item:nth-child(2) img {
@@ -596,6 +604,7 @@ input[type="radio"].visually-hidden {
 .category-item a:hover .category-item-image,
 .category-item a:focus .category-item-image {
 	background-color: #f0c52e;
+	transition: 0.2s ease-out 0s;
 }
 
 .category-item a:active img {
@@ -721,36 +730,41 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
-/*.brand-item a {
+.brand-item a {
 	position: relative;
-}*/
+}
 
-/*.brand-item:first-child a::after {
+.brand-item a::after {
     content: "";
     position: absolute;
     top: -84px;
+    left: 0;
     width: 100%;
     height: 100px;
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)), 
-        url(../img/dji.jpg);
-    background-blend-mode: color;
-    opacity: 0.2;
-}*/
-
-.brand-item img {
-    filter: grayscale(1) opacity(0.2); /*Не работает в IE 11*/
-    /*opacity: 0;*/
+    opacity: 1;
+    transition: opacity 0.1s ease-out 0s;
 }
 
-.brand-item a:hover img {
-    filter: grayscale(0) opacity(1);
-    /*opacity: 1;*/
+.brand-item:nth-child(1) a::after {
+    background-image: url(../img/dji-gray.png);
 }
 
-.brand-item a:hover/*::after*/ {
-   	filter: grayscale(0) opacity(1);
-    /*z-index: -1;*/
+.brand-item:nth-child(2) a::after {
+    background-image: url(../img/spgadgets-gray.png);
+}
+
+.brand-item:nth-child(3) a::after {
+    background-image: url(../img/gopro-gray.png);
+}
+
+.brand-item:nth-child(4) a::after {
+    background-image: url(../img/vive-gray.png);
+}
+
+.brand-item a:hover::after,
+.brand-item a:focus::after {
+   	opacity: 0;
+    transition: 0.2s ease-out 0s;
 }
 
 .index-columns {
@@ -1194,6 +1208,7 @@ input[type="radio"].visually-hidden {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 
 .catalog-item-new::before {
@@ -1514,6 +1529,7 @@ input[type="radio"].visually-hidden {
     height: 32px;
     font-size: 0;
 	opacity: 0.3;
+	transition: 0.1s ease-out 0s;
 }
 
 .social-btn-fb {
@@ -1534,10 +1550,12 @@ input[type="radio"].visually-hidden {
 .social-btn:hover,
 .social-btn:focus {
 	opacity: 0.6;
+	transition: 0.2s ease-out 0s;
 }
 
 .social-btn:active {
 	opacity: 0.1;
+	transition: 0s;
 }
 
 .academy-logo {
