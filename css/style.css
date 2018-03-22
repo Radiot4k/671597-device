@@ -501,7 +501,7 @@ input[type="radio"].visually-hidden {
 .btn {
 	display: inline-block;
 	box-sizing: border-box;
-	min-width: 220px;
+	min-width: 200px;
 	padding: 8px 20px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 18px;
@@ -1022,7 +1022,7 @@ input[type="radio"].visually-hidden {
 
 .filter legend {
 	margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     padding: 0;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 18px;
@@ -1043,6 +1043,7 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-wrap: wrap;
     width: 196px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -1102,15 +1103,56 @@ input[type="radio"].visually-hidden {
 	opacity: 0.2;
 }
 
-.filter-option input:disabled + label {
+.filter-option label {
+	position: relative;
+	margin-left: 38px;
+	cursor: pointer;
+}
+
+.filter-option label:hover::before {
+	opacity: 0.6;
+}
+
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.filter-input-checkbox:checked + label::before {
+    background-image: url(../img/checkbox-on.svg);
+}
+
+.filter-input-radio + label::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/radio-off.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.filter-input-radio:checked + label::before {
+    background-image: url(../img/radio-on.svg);
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label {
 	color: #a6a6a6;
 }
 
-.catalog {
-
-}
-
-.catalog-list-wrap {
+.filter-input-checkbox:disabled + label::before 
+.filter-input-radio:disabled + label::before {
+	opacity: 0.25;
 }
 
 .catalog-list {
