@@ -1402,7 +1402,7 @@ input[type="radio"].visually-hidden {
 	opacity: 1;
 }
 
-.footer-top a:active {
+.footer-top a:active:not(.footer-logo) {
 	opacity: 0.3;
 }
 
@@ -1415,7 +1415,8 @@ input[type="radio"].visually-hidden {
 	text-transform: uppercase;
 }
 
-.main-footer .logo-link {
+.main-footer .logo-link,
+.main-footer .footer-logo {
 	opacity: 1;
 }
 
@@ -1619,7 +1620,7 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-write-us {
-	/*display: none;*/
+	display: none;
     margin-left: -490px;
     margin-top: -287px;
 	padding: 100px;
