@@ -8,6 +8,7 @@ var textarea = writeUsPopap.querySelector("[name='text']");       // Поле в
 var openMapLink = document.querySelector(".open-map");            // Ссылка на большую карту
 var mapPopap = document.querySelector(".modal-map");              // Модальное окно карты
 var closeMap = mapPopap.querySelector(".modal-close");            // Кнопка закрыть модальное окно карты
+var overlay = document.querySelector(".modal-overlay");           // overlay
 var isStorageSupport = true;
 var storName = "";
   
@@ -21,6 +22,7 @@ try {
 writeUsLink.addEventListener("click", function(evt) {
     evt.preventDefault();
     writeUsPopap.classList.add("modal-show");
+    overlay.classList.add("overlay-show");
     if (storName) {
         inputName.value = storName;
         if (storEmail) {
@@ -39,6 +41,7 @@ writeUsLink.addEventListener("click", function(evt) {
 close.addEventListener("click", function(evt) {
     evt.preventDefault();
     writeUsPopap.classList.remove("modal-show");
+    overlay.classList.remove("overlay-show");
     if (writeUsPopap.classList.contains("modal-error")) {
         writeUsPopap.classList.remove("modal-error");
     }
@@ -67,17 +70,20 @@ window.addEventListener("keydown", function (evt) {
         if (writeUsPopap.classList.contains("modal-error")) {
             writeUsPopap.classList.remove("modal-error");
         }
+        overlay.classList.remove("overlay-show");
     }
 });
 
 openMapLink.addEventListener("click", function(evt) {
     evt.preventDefault();
     mapPopap.classList.add("modal-show");
+    overlay.classList.add("overlay-show");
 });
 
 closeMap.addEventListener("click", function(evt) {
     evt.preventDefault();
     mapPopap.classList.remove("modal-show");
+    overlay.classList.remove("overlay-show");
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -86,5 +92,6 @@ window.addEventListener("keydown", function (evt) {
         if (mapPopap.classList.contains("modal-show")) {
             mapPopap.classList.remove("modal-show");
         }
+        overlay.classList.remove("overlay-show");
     }
 });
