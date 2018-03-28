@@ -1,17 +1,20 @@
-var writeUsLink = document.querySelector(".write-us");            // Ссылка "Напишите нам"
-var writeUsPopap = document.querySelector(".modal-write-us");     // Модальное окно формы отправки сообщения
-var close = writeUsPopap.querySelector(".modal-close");           // Кнопка закрыть Модальное окно формы отправки сообщения
-var form = writeUsPopap.querySelector(".write-us-form");          // Форма отправки сообщения
-var inputName = writeUsPopap.querySelector("[name='name']");      // Поле ввода "Имя Фамилия"
-var inputEmail = writeUsPopap.querySelector("[name='e-mail']");   // Поле ввода "E-mail"
-var textarea = writeUsPopap.querySelector("[name='text']");       // Поле ввода текстового сообщения
-var openMapLink = document.querySelector(".open-map");            // Ссылка на большую карту
-var mapPopap = document.querySelector(".modal-map");              // Модальное окно карты
-var closeMap = mapPopap.querySelector(".modal-close");            // Кнопка закрыть модальное окно карты
-var overlay = document.querySelector(".modal-overlay");           // overlay
+var linksList = document.querySelectorAll(".write-us, .modal-write-us, .open-map, .modal-map, .modal-overlay");
+var openMapLink = linksList.item(0);
+var writeUsLink = linksList.item(1);
+var writeUsPopap = linksList.item(2); 
+var mapPopap = linksList.item(3);
+var overlay = linksList.item(4);
+var writeUsElementsList = writeUsPopap.querySelectorAll(".write-us-form, [name='name'], [name='e-mail'], [name='text'], .modal-close");
+var form = writeUsElementsList.item(0);
+var inputName = writeUsElementsList.item(1);
+var inputEmail = writeUsElementsList.item(2);
+var textarea = writeUsElementsList.item(3);
+var closeWriteUsPopap = writeUsElementsList.item(4);
+var closeMap = mapPopap.querySelector(".modal-close");
+
 var isStorageSupport = true;
 var storName = "";
-  
+
 try {
     storName = localStorage.getItem("name");
     storEmail = localStorage.getItem("email");
@@ -38,7 +41,7 @@ writeUsLink.addEventListener("click", function(evt) {
     }
 });
 
-close.addEventListener("click", function(evt) {
+closeWriteUsPopap.addEventListener("click", function(evt) {
     evt.preventDefault();
     writeUsPopap.classList.remove("modal-show");
     overlay.classList.remove("overlay-show");
