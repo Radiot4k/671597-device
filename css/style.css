@@ -468,7 +468,7 @@ input[type="radio"].visually-hidden {
 .popular input:nth-of-type(1):focus ~ .slider-switchers li:nth-child(1) label::before,
 .popular input:nth-of-type(2):focus ~ .slider-switchers li:nth-child(2) label::before,
 .popular input:nth-of-type(3):focus ~ .slider-switchers li:nth-child(3) label::before {
-	outline: #91b1d4 auto 5px;
+	outline: #91b1d4 solid 2px;
 }
 
 .popular-item-image {
@@ -776,7 +776,7 @@ input[type="radio"].visually-hidden {
 .servises-slider input:nth-of-type(1):focus ~ .servises-list-menu li:nth-child(1) .servise-btn,
 .servises-slider input:nth-of-type(2):focus ~ .servises-list-menu li:nth-child(2) .servise-btn,
 .servises-slider input:nth-of-type(3):focus ~ .servises-list-menu li:nth-child(3) .servise-btn {
-	outline: #91b1d4 auto 5px;
+	outline: #91b1d4 solid 2px;
 }
 
 .servise-btn:active::before,
@@ -1271,28 +1271,31 @@ input[type="radio"].visually-hidden {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    width: 196px;
-    margin-top: 21px;
+    width: 200px;
+    margin-top: 10px;
 }
 
 .range-controls {
 	-ms-flex-item-align: end;
 	align-self: flex-end;
 	position: relative;
-	width: 100%;
-	margin-bottom: 10px;
+	width: 196px;
+	-webkit-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+	transform: translateX(4px);
 }
 
 .range-controls .scale {
 	width: 100%;
 	height: 2px;
+	margin: 10px 0;
 	background-color: #dbdbdb;
-	-webkit-transform: translateX(4px);
-	-ms-transform: translateX(4px);
-	transform: translateX(4px);
 }
 
 .range-controls .bar {
+	position: absolute;
+    top: 10px;
+    left: 0;
   	width: 110px;
   	height: 2px;
 	background-color: #91c92f;
@@ -1300,7 +1303,7 @@ input[type="radio"].visually-hidden {
 
 .range-controls .toggle {
 	position: absolute;
-  	top: -10px;
+  	top: 0px;
   	width: 4px;
   	height: 4px;
   	padding: 0;
@@ -1310,24 +1313,30 @@ input[type="radio"].visually-hidden {
   	-webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
   	box-shadow: 0 2px 1px 0 #cfcfcf;
   	cursor: pointer;
+  	transform: translateX(-50%);
 }
 
 .range-controls .toggle:active {
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
-	transform: scale(1.1);
+	transform: translateX(-50%) scale(1.1);
 }
 
 .range-controls .toggle-min {
-  	left: -6px;
+  	left: 0;
 }
 
 .range-controls .toggle-max {
-  	left: 110px;
+  	left: 113px;
+}
+
+.filter-input-range[name="count_from"]:focus ~ .range-controls .toggle-min,
+.filter-input-range[name="count_to"]:focus ~ .range-controls .toggle-max {
+	outline: #91b1d4 solid 2px;
 }
 
 .output-area {
-	width: 50%;
+	width: 45%;
 	margin: 0;
 	padding: 0;
 	font-family: "Gilroy", Arial, sans-serif;
@@ -1338,7 +1347,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-option input:focus + label {
-	outline: #91b1d4 auto 5px;
+	outline: #91b1d4 solid 2px;
 }
 
 .filter-option label {
@@ -1562,7 +1571,7 @@ input[type="radio"].visually-hidden {
 
 .pagination-item-step a {
 	display: inline-block;
-	padding: 24px 30px 22px;
+	padding: 24px 28px 22px;
 	vertical-align: middle;
 	letter-spacing: 3.5px;
 }
@@ -1572,8 +1581,8 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item-step:last-child {
+	width: 135px;
 	margin-left: auto;
-	margin-right: -4px;
 }
 
 .pagination-item-step a,
@@ -1592,7 +1601,7 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item {
-	margin: 25px 8px 19px 21px;
+	margin: 25px 10px 19px 18px;
 }
 
 .pagination-item a:not(.pagination-item-current) {
