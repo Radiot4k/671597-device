@@ -35,6 +35,11 @@ toggleMin.addEventListener('mousedown', function(event) {
   	outputFrom.innerHTML = rangeFrom.value;
 });
 
+toggleMin.addEventListener('touchstart', function(event) {
+    event.preventDefault();
+    flagMin = true;
+});
+
 toggleMax.addEventListener('mousedown', function(event) {
   	event.preventDefault();
   	flagMax = true;
@@ -51,9 +56,19 @@ toggleMax.addEventListener('mousedown', function(event) {
   	outputTo.innerHTML = rangeTo.value;
 });
 
+toggleMax.addEventListener('touchstart', function(event) {
+    event.preventDefault();
+    flagMax = true;
+});
+
 document.addEventListener('mouseup', function(event) {
   	flagMax = false;
   	flagMin = false;
+});
+
+document.addEventListener('touchend', function(event) {
+    flagMax = false;
+    flagMin = false;
 });
 
 fieldset.addEventListener('mousemove', function(event) {
